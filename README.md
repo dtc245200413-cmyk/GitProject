@@ -65,3 +65,41 @@ Mục tiêu của bài tập này là thực hành tạo một CSDL mới và t�
      - Câu lệnh `create table Student...` thành công (0 rows affected).
    - Tiếp theo, ở thanh điều hướng bên trái (tab **SCHEMAS**), bạn nhấn nút **Refresh** (hình mũi tên xoay vòng).
    - Bạn sẽ thấy CSDL `demo` xuất hiện. Mở rộng `demo` -> `Tables`, bạn sẽ thấy bảng `Student` đã được tạo thành công với các trường `id`, `name`, `age`, `country`.
+
+---
+---
+
+# Bài tập: Luyện tập các thao tác tạo bảng bằng giao diện trên MySQL Workbench
+
+Mục tiêu của bài tập này là sử dụng giao diện đồ họa (GUI) của MySQL Workbench để tạo bảng. Chúng ta sẽ tạo bảng Class và Teacher trong một CSDL đã có (ví dụ: student-management hoặc demo).
+
+## Các bước thực hiện:
+
+### 1. Tạo bảng Class
+1. **Khởi động MySQL Workbench** và đăng nhập vào kết nối cơ sở dữ liệu của bạn.
+2. Tại bảng điều hướng bên trái (tab **SCHEMAS**), tìm đến schema mang tên student-management (hoặc CSDL mà bạn muốn tạo bảng).
+3. Mở rộng schema đó ra, **click chuột phải** vào mục **Tables** và chọn **Create Table...**
+4. Trong màn hình tạo bảng mới hiện ra:
+   - Tại ô **Table Name**, bạn nhập tên bảng là Class.
+   - Ở khu vực bên dưới (phần Column Name), bạn click đúp vào dòng đầu tiên để thêm các trường. Lần lượt thêm các trường:
+     - id (Kiểu dữ liệu: INT, có thể tích chọn **PK** - Primary Key và **NN** - Not Null).
+     - 
+ame (Kiểu dữ liệu: VARCHAR(45) hoặc kiểu text phù hợp).
+5. Sau khi điền xong các trường, nhấn nút **Apply** ở góc dưới cùng bên phải.
+6. Một cửa sổ xác nhận sẽ hiện ra chứa mã SQL tự sinh, tiếp tục nhấn **Apply** một lần nữa, sau đó nhấn **Finish** để hoàn tất việc tạo bảng Class.
+
+### 2. Tạo bảng Teacher
+1. Làm tương tự như trên: **Click chuột phải** vào mục **Tables** trong schema student-management và chọn **Create Table...**
+2. Tại ô **Table Name**, nhập tên bảng là Teacher.
+3. Thêm lần lượt các trường tương ứng vào danh sách cột:
+   - id (Kiểu dữ liệu INT).
+   - 
+ame (Kiểu dữ liệu VARCHAR(...)).
+   - ge (Kiểu dữ liệu INT).
+   - country (Kiểu dữ liệu VARCHAR(...)).
+4. Nhấn nút **Apply** ở góc dưới cùng.
+5. Kiểm tra lại đoạn mã SQL tự động sinh ra và nhấn **Apply** lần nữa, rồi nhấn **Finish** để hoàn tất tạo bảng Teacher.
+
+### 3. Kiểm tra kết quả
+- Tại tab **SCHEMAS**, nhấn nút **Refresh** (hình mũi tên xoay vòng). Mở rộng phần **Tables** của schema student-management, bạn sẽ thấy cả 2 bảng Class và Teacher đã xuất hiện thành công.
+
